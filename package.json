@@ -1,0 +1,47 @@
+{
+  "name": "phones-backend",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-jest": "^26.1.0",
+    "jest": "^26.1.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "tsc": "tsc"
+  },
+  "main": "server.js",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^3.9.6"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.mjs$": "babel-jest"
+    },
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "mjs"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/frontend",
+      "src/shared",
+      "."
+    ]
+  },
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
+}
